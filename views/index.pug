@@ -1,5 +1,16 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  header.main-header
+    .container
+      .hero
+        h1.hero__title Corrupt-It
+        h3.hero__tagline Make a file unusable/corrupt
+  main.main-content
+    .container
+      form(method="post" enctype="multipart/form-data")
+        .form-c
+          label(for="file") Select File
+          input#file(type="file", name="file")
+        .form-c
+          button.btn.btn--primary(type="submit") Download
