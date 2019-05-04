@@ -5,6 +5,12 @@ const fs = require("fs");
 const mime = require("mime-types");
 const path = require("path");
 
+const dirToUpload = path.resolve(process.cwd(), "uploads");
+
+if (!fs.existsSync(dirToUpload)) {
+  fs.mkdirSync(dirToUpload);
+}
+
 router.get("/", function(req, res, next) {
   res.render("index", { title: "Corrupt-It" });
 });
@@ -12,7 +18,7 @@ router.get("/", function(req, res, next) {
 const fileUpload = multer({
   storage: multer.diskStorage({
     destination: (req, file, cb) => {
-      cb(null, "uploads/");
+      cb(null, dirToUpload);
     },
     filename: function(req, file, cb) {
       let ext = mime.extension(file.mimetype);
