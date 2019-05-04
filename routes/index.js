@@ -20,7 +20,7 @@ const fileUpload = multer({
     }
   }),
   limits: {
-    fileSize: 5000
+    fileSize: 5000000
   }
 }).single("file");
 
