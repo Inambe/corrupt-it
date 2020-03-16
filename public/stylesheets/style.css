@@ -28,7 +28,11 @@ footer {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	padding: 1rem 0;
+	text-align: center;
+}
+form {
+	width: 30%;
+	margin: 0 auto;
 }
 
 /*
@@ -40,11 +44,11 @@ footer {
 /* hero */
 .hero {
 	border-radius: 5px;
-	transform: rotate(2deg);
 	background: #4c4c4c;
-	display: inline-block;
 	padding: 2rem 3rem;
 	transition: transform 0.3s;
+	width: 30%;
+	margin: 0 auto;
 }
 .hero:hover {
 	transform: rotate(-3deg);
@@ -88,8 +92,9 @@ footer {
 }
 .form-c label {
 	display: block;
-	font-size: 1.2rem;
-	margin-bottom: 1rem;
+	font-size: 0.8rem;
+	margin-bottom: 0.3rem;
+	font-weight: bold;
 }
 
 /* btn */
