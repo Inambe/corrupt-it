@@ -1,6 +1,6 @@
 /*
 *
-  resets
+  resets/base
 *
 */
 body {
@@ -118,6 +118,8 @@ form {
 /* error */
 .error {
 	padding: 1rem 0;
+	width: 35%;
+	margin: 0 auto;
 }
 .error__image {
 	height: 200px;
